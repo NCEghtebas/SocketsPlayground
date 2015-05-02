@@ -16,6 +16,7 @@ s.listen(backlog)
 while 1: 
     client, address = s.accept() 
     data = client.recv(size) 
-    if data: 
+    if data:
+        print(data)
         client.send(data) 
     client.close()
